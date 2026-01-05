@@ -1,0 +1,75 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "Event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "date": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    },
+    "location": {
+      "type": "string"
+    },
+    "coverImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "registrationLink": {
+      "type": "string"
+    },
+    "avenues": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::avenue.avenue",
+      "mappedBy": "events"
+    },
+    "eventstatus": {
+      "type": "enumeration",
+      "enum": [
+        "Upcoming, ",
+        "Ongoing, ",
+        "Completed, ",
+        "Cancelled"
+      ]
+    },
+    "metaDescription": {
+      "type": "string"
+    }
+  }
+}

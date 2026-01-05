@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "avenues",
+  "info": {
+    "singularName": "avenue",
+    "pluralName": "avenues",
+    "displayName": "Avenue"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "color": {
+      "type": "string"
+    },
+    "projects": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "mappedBy": "avenues"
+    },
+    "events": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::event.event",
+      "inversedBy": "avenues"
+    },
+    "directors": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::director.director",
+      "mappedBy": "avenue"
+    }
+  }
+}

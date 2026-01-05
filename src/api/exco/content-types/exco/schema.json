@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "excos",
+  "info": {
+    "singularName": "exco",
+    "pluralName": "excos",
+    "displayName": "Exco"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "position": {
+      "type": "enumeration",
+      "enum": [
+        "President, ",
+        "Secretary, ",
+        "Treasurer,",
+        "Vice President,",
+        "Immediate Past President"
+      ]
+    },
+    "bio": {
+      "type": "blocks"
+    },
+    "email": {
+      "type": "email"
+    },
+    "priority": {
+      "type": "integer"
+    }
+  }
+}
