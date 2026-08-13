@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "run_club_posts",
+  "info": {
+    "singularName": "run-club-post",
+    "pluralName": "run-club-posts",
+    "displayName": "Run Club Post",
+    "description": "Posts/updates shown on the Run Club page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "postedAt": {
+      "type": "datetime"
+    }
+  }
+}

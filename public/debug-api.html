@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strapi API Debugger</title>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        max-width: 800px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+        line-height: 1.5;
+      }
+      h1 {
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+      }
+      .card {
+        background: #f5f5f5;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 1rem;
+      }
+      .error {
+        color: red;
+        background: #fee;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+      pre {
+        background: #333;
+        color: #fff;
+        padding: 1rem;
+        overflow-x: auto;
+        border-radius: 4px;
+      }
+      button {
+        padding: 0.5rem 1rem;
+        background: #0070f3;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: #0051a2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>API Debugger</h1>
+    <p>This page tests if your Strapi API is accessible and returning data.</p>
+
+    <div class="card">
+      <h3>Step 1: Check Global Settings</h3>
+      <p>Fetching: <code id="url-display">/api/global?populate=*</code></p>
+      <button id="test-btn">Test API Connection</button>
+    </div>
+
+    <div id="output"></div>
+
+    <script src="debug-api.js"></script>
+  </body>
+</html>

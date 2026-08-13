@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "our_journeys",
+  "info": {
+    "singularName": "our-journey",
+    "pluralName": "our-journeys",
+    "displayName": "Our Journey Page",
+    "description": "Content for the Our Journey page (club milestones, awards, past presidents)"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroSubtitle": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "awards": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.award"
+    },
+    "pastPresidents": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.past-president"
+    }
+  }
+}

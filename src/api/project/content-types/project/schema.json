@@ -18,6 +18,9 @@
       "type": "uid",
       "targetField": "title"
     },
+    "date": {
+      "type": "date"
+    },
     "description": {
       "type": "blocks"
     },
@@ -50,8 +53,8 @@
     "projectStatus": {
       "type": "enumeration",
       "enum": [
-        "Completed,",
-        "Ongoing,",
+        "Completed",
+        "Ongoing",
         "Upcoming"
       ]
     },
@@ -60,6 +63,30 @@
     },
     "featured": {
       "type": "boolean"
+    },
+    "focusLocation": {
+      "type": "string"
+    },
+    "impactGroup": {
+      "type": "string"
+    },
+    "chairDirectors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::director.director",
+      "inversedBy": "projectsChaired"
+    },
+    "chairExco": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::exco.exco",
+      "inversedBy": "projectsChaired"
+    },
+    "chairMembers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::member.member",
+      "inversedBy": "projectsChaired"
     }
   }
 }

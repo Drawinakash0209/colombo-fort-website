@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_value_items",
+  "info": {
+    "displayName": "ValueItem",
+    "icon": "star",
+    "description": "A single core value shown on the Who We Are page"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

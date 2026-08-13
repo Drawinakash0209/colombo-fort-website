@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_list_items",
+  "info": {
+    "displayName": "ListItem",
+    "icon": "bulletList",
+    "description": "A single short bullet-point line, e.g. shown in a benefits or eligibility list"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "collectionName": "components_shared_donation_methods",
+  "info": {
+    "displayName": "DonationMethod",
+    "icon": "wallet",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "accountName": {
+      "type": "string"
+    },
+    "accountNumber": {
+      "type": "string"
+    },
+    "bankName": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "swiftCode": {
+      "type": "string"
+    },
+    "link": {
+      "type": "string"
+    },
+    "instructions": {
+      "type": "text"
+    },
+    "qrImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_pages",
+  "info": {
+    "singularName": "about-page",
+    "pluralName": "about-pages",
+    "displayName": "About Page",
+    "description": "Content for the About Us Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroSubtitle": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "mainContent": {
+      "type": "blocks"
+    },
+    "mission": {
+      "type": "blocks"
+    },
+    "vision": {
+      "type": "blocks"
+    },
+    "missionImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "visionImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"]
+    },
+    "historyGallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    },
+    "missionSubtitle": {
+      "type": "string"
+    },
+    "visionSubtitle": {
+      "type": "string"
+    },
+    "storyTitle": {
+      "type": "string"
+    },
+    "storyContent": {
+      "type": "blocks"
+    },
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.value-item"
+    },
+    "rotaryPortalUrl": {
+      "type": "string",
+      "default": "https://rmis.rotaract3220.org/login"
+    },
+    "gallery": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": ["images"]
+    }
+  }
+}

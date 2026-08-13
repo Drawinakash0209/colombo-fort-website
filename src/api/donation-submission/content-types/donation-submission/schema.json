@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "donation_submissions",
+  "info": {
+    "singularName": "donation-submission",
+    "pluralName": "donation-submissions",
+    "displayName": "Donation Submission",
+    "description": "Bank transfer confirmations submitted by donors on the Support Us page. Admin-only — never shown publicly."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "amount": {
+      "type": "decimal",
+      "required": true
+    },
+    "anonymous": {
+      "type": "boolean",
+      "default": false
+    },
+    "email": {
+      "type": "email"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "receipt": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "reviewed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

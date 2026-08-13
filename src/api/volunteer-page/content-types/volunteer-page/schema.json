@@ -1,0 +1,39 @@
+{
+  "kind": "singleType",
+  "collectionName": "volunteer_pages",
+  "info": {
+    "singularName": "volunteer-page",
+    "pluralName": "volunteer-pages",
+    "displayName": "Volunteer Page",
+    "description": "Content for the Volunteer Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroSubtitle": {
+      "type": "string"
+    },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "intro": {
+      "type": "blocks"
+    },
+    "howToHelp": {
+      "type": "blocks"
+    },
+    "ctaText": {
+      "type": "string",
+      "default": "Get in touch to volunteer"
+    }
+  }
+}

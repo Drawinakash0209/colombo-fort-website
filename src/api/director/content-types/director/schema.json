@@ -44,6 +44,12 @@
       "relation": "manyToOne",
       "target": "api::avenue.avenue",
       "inversedBy": "directors"
+    },
+    "projectsChaired": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "mappedBy": "chairDirectors"
     }
   }
 }

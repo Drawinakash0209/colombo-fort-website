@@ -20,10 +20,10 @@
     "position": {
       "type": "enumeration",
       "enum": [
-        "President, ",
-        "Secretary, ",
-        "Treasurer,",
-        "Vice President,",
+        "President",
+        "Secretary",
+        "Treasurer",
+        "Vice President",
         "Immediate Past President"
       ]
     },
@@ -35,6 +35,22 @@
     },
     "priority": {
       "type": "integer"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "projectsChaired": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::project.project",
+      "mappedBy": "chairExco"
     }
   }
 }

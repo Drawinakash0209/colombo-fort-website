@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "fort_view_applications",
+  "info": {
+    "singularName": "fort-view-application",
+    "pluralName": "fort-view-applications",
+    "displayName": "Fort View Application",
+    "description": "'Work With Us' applications submitted on the Fort View page. Admin-only — never shown publicly."
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fullName": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "contactNumber": {
+      "type": "string"
+    },
+    "areaOfInterest": {
+      "type": "enumeration",
+      "enum": [
+        "Photography",
+        "Videography",
+        "Video Editing",
+        "Graphic Design",
+        "Content Creation",
+        "Creative Direction"
+      ]
+    },
+    "cv": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "files",
+        "images"
+      ]
+    },
+    "reviewed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

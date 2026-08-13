@@ -21,6 +21,13 @@
     "description": {
       "type": "blocks"
     },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "icon": {
       "type": "media",
       "multiple": false,
@@ -51,6 +58,16 @@
       "relation": "oneToMany",
       "target": "api::director.director",
       "mappedBy": "avenue"
+    },
+    "focusLocation": {
+      "type": "string"
+    },
+    "impactGroup": {
+      "type": "string"
+    },
+    "order": {
+      "type": "integer",
+      "default": 0
     }
   }
 }

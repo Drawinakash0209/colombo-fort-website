@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_shared_past_presidents",
+  "info": {
+    "displayName": "PastPresident",
+    "icon": "crown",
+    "description": "A past president shown in the Our Journey page's Past Presidents section"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "year": {
+      "type": "string"
+    },
+    "photo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

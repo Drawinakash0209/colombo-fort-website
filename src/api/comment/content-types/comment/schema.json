@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comments",
+  "info": {
+    "singularName": "comment",
+    "pluralName": "comments",
+    "displayName": "Comment",
+    "description": "Reader comments on blog posts, held for admin approval before showing publicly"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "content": {
+      "type": "text",
+      "required": true
+    },
+    "authorName": {
+      "type": "string",
+      "default": "Anonymous"
+    },
+    "approved": {
+      "type": "boolean",
+      "default": false
+    },
+    "fortViewPost": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::fort-view-post.fort-view-post",
+      "inversedBy": "comments"
+    },
+    "blogPost": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::blog-post.blog-post",
+      "inversedBy": "comments"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "donation_pages",
+  "info": {
+    "singularName": "donation-page",
+    "pluralName": "donation-pages",
+    "displayName": "Donation Page",
+    "description": "Content for the Donation Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "heroTitle": {
+      "type": "string"
+    },
+    "heroSubtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "methods": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.donation-method"
+    },
+    "thankYouNote": {
+      "type": "text"
+    }
+  }
+}

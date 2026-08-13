@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_shared_feature_cards",
+  "info": {
+    "displayName": "FeatureCard",
+    "icon": "grid",
+    "description": "A single service/offering card, e.g. shown on the 'What We Do' section"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}

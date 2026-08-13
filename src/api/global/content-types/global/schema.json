@@ -1,0 +1,61 @@
+{
+  "kind": "singleType",
+  "collectionName": "globals",
+  "info": {
+    "singularName": "global",
+    "pluralName": "globals",
+    "displayName": "Global Site Settings",
+    "description": "Global settings for the website like logo, site name, etc."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "siteName": {
+      "type": "string",
+      "required": true,
+      "default": "Rotaract Club of Colombo Fort"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "favicon": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "footerContent": {
+      "type": "blocks"
+    },
+    "footerText": {
+      "type": "string"
+    },
+    "marqueeText": {
+      "type": "string"
+    },
+    "marqueeEnabled": {
+      "type": "boolean",
+      "default": true
+    },
+    "themeColor": {
+      "type": "string",
+      "regex": "^#[0-9a-fA-F]{6}$",
+      "default": "#ff4c83"
+    },
+    "headingFont": {
+      "type": "enumeration",
+      "enum": ["highstar", "bloved"],
+      "default": "highstar"
+    },
+    "socialLinks": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.social-link"
+    }
+  }
+}
