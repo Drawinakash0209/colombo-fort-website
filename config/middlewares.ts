@@ -6,9 +6,14 @@ export default [
     name: 'strapi::cors',
     config: {
       // Vercel gives every deploy (production + previews) a *.vercel.app
-      // subdomain, so this covers all of them plus local dev. Add the
-      // real custom domain here once one is pointed at Vercel.
-      origin: ['http://localhost:3000', 'https://*.vercel.app'],
+      // subdomain, so this covers all of them plus local dev, plus the
+      // real domain once it's pointed at the Vercel deployment.
+      origin: [
+        'http://localhost:3000',
+        'https://*.vercel.app',
+        'https://rotaractcolombofort.org',
+        'https://www.rotaractcolombofort.org',
+      ],
     },
   },
   'strapi::poweredBy',
