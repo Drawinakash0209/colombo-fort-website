@@ -10,6 +10,10 @@ RUN npm ci
 
 COPY . .
 ENV NODE_ENV=production
+# V8 auto-sizes its heap off physical RAM and ignores swap, which is too
+# conservative for the admin panel build on a low-RAM VPS — raise it
+# explicitly so the build can actually use the swap headroom that's there.
+ENV NODE_OPTIONS=--max-old-space-size=3072
 RUN npm run build
 
 FROM node:20-alpine
