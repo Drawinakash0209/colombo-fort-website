@@ -18,6 +18,13 @@
     "heroSubtitle": {
       "type": "string"
     },
+    "heroImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "organizationalStructureImage": {
       "type": "media",
       "multiple": false,
