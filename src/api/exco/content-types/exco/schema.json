@@ -18,14 +18,7 @@
       "type": "string"
     },
     "position": {
-      "type": "enumeration",
-      "enum": [
-        "President",
-        "Secretary",
-        "Treasurer",
-        "Vice President",
-        "Immediate Past President"
-      ]
+      "type": "string"
     },
     "bio": {
       "type": "blocks"
