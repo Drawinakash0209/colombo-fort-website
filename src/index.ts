@@ -15,7 +15,7 @@ export default {
     console.log('--- Granting Public Permissions ---');
     const publicRole = await strapi.db.query('plugin::users-permissions.role').findOne({ where: { type: 'public' } });
     if (publicRole) {
-      const apisToGrant = ['avenue', 'project', 'exco', 'director', 'member', 'advisor', 'home-page', 'about-page', 'team-page', 'our-journey', 'contact-page', 'global', 'fort-view', 'fort-view-post', 'blog-page', 'blog-post', 'run-club', 'run-club-post', 'donation-page', 'volunteer-page', 'annual-report'];
+      const apisToGrant = ['avenue', 'project', 'exco', 'director', 'member', 'advisor', 'home-page', 'about-page', 'team-page', 'our-journey', 'contact-page', 'global', 'fort-view', 'fort-view-post', 'blog-page', 'blog-post', 'run-club', 'run-club-post', 'run-event', 'donation-page', 'volunteer-page', 'annual-report'];
       for (const api of apisToGrant) {
         const uid = `api::${api}.${api}`;
         

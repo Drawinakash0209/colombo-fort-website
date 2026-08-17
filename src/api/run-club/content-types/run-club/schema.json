@@ -47,6 +47,46 @@
         "videos",
         "audios"
       ]
+    },
+    "missionText": {
+      "type": "text"
+    },
+    "whatWeDo": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.feature-card"
+    },
+    "values": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.value-item"
+    },
+    "whyJoinIntro": {
+      "type": "string",
+      "default": "Members enjoy:"
+    },
+    "memberBenefits": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
+    "whoCanJoinIntro": {
+      "type": "text"
+    },
+    "whoCanJoin": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
+    "whoCanJoinNote": {
+      "type": "text"
+    },
+    "joinTitle": {
+      "type": "string",
+      "default": "Join the Movement"
+    },
+    "joinText": {
+      "type": "text"
     }
   }
 }
