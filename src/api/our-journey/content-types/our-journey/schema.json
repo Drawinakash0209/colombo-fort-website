@@ -28,6 +28,11 @@
       "repeatable": true,
       "component": "shared.award"
     },
+    "recognition": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.list-item"
+    },
     "pastPresidents": {
       "type": "component",
       "repeatable": true,

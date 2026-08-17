@@ -18,6 +18,9 @@
     "role": {
       "type": "string"
     },
+    "position": {
+      "type": "string"
+    },
     "bio": {
       "type": "text"
     },

@@ -911,15 +911,7 @@ export interface ApiExcoExco extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    position: Schema.Attribute.Enumeration<
-      [
-        'President',
-        'Secretary',
-        'Treasurer',
-        'Vice President',
-        'Immediate Past President',
-      ]
-    >;
+    position: Schema.Attribute.String;
     priority: Schema.Attribute.Integer;
     projectsChaired: Schema.Attribute.Relation<
       'manyToMany',

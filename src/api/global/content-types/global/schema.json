@@ -35,6 +35,12 @@
     "footerText": {
       "type": "string"
     },
+    "contactEmail": {
+      "type": "email"
+    },
+    "contactAddress": {
+      "type": "string"
+    },
     "marqueeText": {
       "type": "string"
     },
