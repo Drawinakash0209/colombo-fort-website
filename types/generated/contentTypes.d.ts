@@ -1078,6 +1078,8 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    contactAddress: Schema.Attribute.String;
+    contactEmail: Schema.Attribute.Email;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1174,6 +1176,7 @@ export interface ApiMemberMember extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     phone: Schema.Attribute.String;
     photo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    position: Schema.Attribute.String;
     projectsChaired: Schema.Attribute.Relation<
       'manyToMany',
       'api::project.project'
@@ -1213,6 +1216,7 @@ export interface ApiOurJourneyOurJourney extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     pastPresidents: Schema.Attribute.Component<'shared.past-president', true>;
     publishedAt: Schema.Attribute.DateTime;
+    recognition: Schema.Attribute.Component<'shared.list-item', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1264,6 +1268,7 @@ export interface ApiProjectProject extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'title'>;
+    tagline: Schema.Attribute.String;
     title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -1328,15 +1333,61 @@ export interface ApiRunClubRunClub extends Struct.SingleTypeSchema {
     >;
     heroImage: Schema.Attribute.Media<'images'>;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    joinText: Schema.Attribute.Text;
+    joinTitle: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Join the Movement'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
       'api::run-club.run-club'
     > &
       Schema.Attribute.Private;
+    memberBenefits: Schema.Attribute.Component<'shared.list-item', true>;
+    missionText: Schema.Attribute.Text;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     tagline: Schema.Attribute.String;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    values: Schema.Attribute.Component<'shared.value-item', true>;
+    whatWeDo: Schema.Attribute.Component<'shared.feature-card', true>;
+    whoCanJoin: Schema.Attribute.Component<'shared.list-item', true>;
+    whoCanJoinIntro: Schema.Attribute.Text;
+    whoCanJoinNote: Schema.Attribute.Text;
+    whyJoinIntro: Schema.Attribute.String &
+      Schema.Attribute.DefaultTo<'Members enjoy:'>;
+  };
+}
+
+export interface ApiRunEventRunEvent extends Struct.CollectionTypeSchema {
+  collectionName: 'run_events';
+  info: {
+    description: "A scheduled Run Club event shown on the 'Upcoming Runs' section of the Run Club page";
+    displayName: 'Upcoming Run';
+    pluralName: 'run-events';
+    singularName: 'run-event';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    date: Schema.Attribute.DateTime;
+    distance: Schema.Attribute.String;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::run-event.run-event'
+    > &
+      Schema.Attribute.Private;
+    meetingPoint: Schema.Attribute.String;
+    pace: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    registrationLink: Schema.Attribute.String;
+    title: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -1969,6 +2020,7 @@ declare module '@strapi/strapi' {
       'api::project.project': ApiProjectProject;
       'api::run-club-post.run-club-post': ApiRunClubPostRunClubPost;
       'api::run-club.run-club': ApiRunClubRunClub;
+      'api::run-event.run-event': ApiRunEventRunEvent;
       'api::team-page.team-page': ApiTeamPageTeamPage;
       'api::test.test': ApiTestTest;
       'api::volunteer-page.volunteer-page': ApiVolunteerPageVolunteerPage;
