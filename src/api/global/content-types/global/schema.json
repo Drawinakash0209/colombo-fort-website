@@ -55,8 +55,8 @@
     },
     "headingFont": {
       "type": "enumeration",
-      "enum": ["highstar", "bloved"],
-      "default": "highstar"
+      "enum": ["extenda", "highstar", "bloved"],
+      "default": "extenda"
     },
     "socialLinks": {
       "type": "component",
