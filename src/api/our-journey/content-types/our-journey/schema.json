@@ -23,6 +23,11 @@
       "multiple": false,
       "allowedTypes": ["images"]
     },
+    "timeline": {
+      "type": "component",
+      "repeatable": true,
+      "component": "shared.timeline-node"
+    },
     "awards": {
       "type": "component",
       "repeatable": true,

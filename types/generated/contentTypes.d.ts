@@ -1086,8 +1086,10 @@ export interface ApiGlobalGlobal extends Struct.SingleTypeSchema {
     favicon: Schema.Attribute.Media<'images'>;
     footerContent: Schema.Attribute.Blocks;
     footerText: Schema.Attribute.String;
-    headingFont: Schema.Attribute.Enumeration<['highstar', 'bloved']> &
-      Schema.Attribute.DefaultTo<'highstar'>;
+    headingFont: Schema.Attribute.Enumeration<
+      ['extenda', 'highstar', 'bloved']
+    > &
+      Schema.Attribute.DefaultTo<'extenda'>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -1217,6 +1219,7 @@ export interface ApiOurJourneyOurJourney extends Struct.SingleTypeSchema {
     pastPresidents: Schema.Attribute.Component<'shared.past-president', true>;
     publishedAt: Schema.Attribute.DateTime;
     recognition: Schema.Attribute.Component<'shared.list-item', true>;
+    timeline: Schema.Attribute.Component<'shared.timeline-node', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

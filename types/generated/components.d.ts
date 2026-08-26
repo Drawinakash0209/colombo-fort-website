@@ -114,6 +114,20 @@ export interface SharedTag extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTimelineNode extends Struct.ComponentSchema {
+  collectionName: 'components_shared_timeline_nodes';
+  info: {
+    description: "A single year/milestone entry on the Our Journey page's historical track";
+    displayName: 'TimelineNode';
+    icon: 'calendar';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    title: Schema.Attribute.String;
+    year: Schema.Attribute.String;
+  };
+}
+
 export interface SharedValueItem extends Struct.ComponentSchema {
   collectionName: 'components_shared_value_items';
   info: {
@@ -138,6 +152,7 @@ declare module '@strapi/strapi' {
       'shared.social-link': SharedSocialLink;
       'shared.stat': SharedStat;
       'shared.tag': SharedTag;
+      'shared.timeline-node': SharedTimelineNode;
       'shared.value-item': SharedValueItem;
     }
   }
