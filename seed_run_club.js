@@ -60,8 +60,6 @@ async function main() {
   try {
     await strapi.load();
     console.log('Strapi loaded.');
-    await strapi.start();
-    console.log('Strapi started.');
 
     const uid = 'api::run-club.run-club';
     const existing = await strapi.documents(uid).findMany({});
